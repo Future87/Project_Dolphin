@@ -9,8 +9,8 @@ public class Gem : MonoBehaviour {
 	public GameObject gemShade;
 	public List<Gem> Neighbors = new List<Gem>();
 
-	public int GridWidth;
-	public int GridHeight;
+	//public int GridWidth;
+	//public int GridHeight;
 	public GameObject gemPrefab;
 
 	// Use this for initialization
