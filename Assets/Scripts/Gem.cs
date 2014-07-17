@@ -6,10 +6,27 @@ public class Gem : MonoBehaviour {
 
 	public string[] gemSpriteName = {"RedGem", "BlueGem", "YellowGem", "GreenGem", "PurpleGem"};
 	public GameObject selector;
-	string color = "";
+	public string color = "";
 	public GameObject gemShade;
 	public List<Gem> Neighbors = new List<Gem>();
-	public bool isSelected;
+	public bool isSelected =false;
+	public bool isMatched =false;
+	
+	public int XCoord
+	{
+		get
+		{
+			return Mathf.RoundToInt(transform.localPosition.x);
+		}
+	}
+	
+	public int YCoord
+	{
+		get
+		{
+			return Mathf.RoundToInt(transform.localPosition.y);
+		}
+	}
 
 	//public int GridWidth;
 	//public int GridHeight;

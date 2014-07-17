@@ -14,6 +14,7 @@ public class Board : MonoBehaviour {
 	public Gem gem1, gem2;
 	public float startTime;
 	public float SwapRate=2;
+	public int AmountToMatch = 3;
 
 	// Use this for initialization
 	void Start () 
@@ -49,6 +50,47 @@ public class Board : MonoBehaviour {
 				
 				isSwapping = false;
 				TogglePhysics(false);
+				CheckMatch();
+			}
+		}
+	}
+	
+	public void CheckMatch()
+	{
+		List<Gem> gem1List = new List<Gem>();
+		List<Gem> gem2List = new List<Gem>();
+		ConstructMatchList(gem1.color, gem1, gem1.XCoord, gem1.YCoord,ref gem1List);
+		ConstructMatchList(gem2.color, gem2, gem2.XCoord, gem2.YCoord,ref gem2List);
+		
+		print ("Gem1 " + gem1List.Count);
+	}
+	
+	public void ConstructMatchList(string color, Gem gem, int XCord, int YCord, ref List<Gem> MatchList)
+	{
+		if (gem == null)
+		{
+			return;
+		}
+		
+		else if (gem.color != color)
+		{
+			return;
+		}
+		
+		else if (MatchList.Contains(gem))
+		{
+			return;
+		}
+		
+		else
+		{
+			MatchList.Add(gem);
+			if(XCord == gem.XCoord || YCord == gem.YCoord)
+			{
+				foreach(Gem g in gem.Neighbors)
+				{
+					ConstructMatchList(color, g, XCord, YCord, ref MatchList);
+				}
 			}
 		}
 	}
