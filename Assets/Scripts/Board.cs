@@ -32,6 +32,7 @@ public class Board : MonoBehaviour {
 
 		gameObject.transform.position = new Vector3(-6f,-6f,0);
 
+
 	}
 	
 	// Update is called once per frame
