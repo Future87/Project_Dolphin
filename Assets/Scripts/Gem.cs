@@ -53,18 +53,13 @@ public class Gem : MonoBehaviour {
 		color = gemSpriteName[Random.Range (0,gemSpriteName.Length)];
 		Material gemColor = Resources.Load ("Materials/" + color) as Material;
 		gemShade.renderer.material = gemColor;
-
-
-		/*color = gemSpriteName[Random.Range (0,gemSpriteName.Length)];
-		Sprite gemColor = Resources.Load<Sprite> ("Sprites/" + color);
-		gemShade.AddComponent<SpriteRenderer>();
-		gemShade.GetComponent<SpriteRenderer>().sprite = gemColor;
-		isMatched = false;*/
+		isMatched = false;
 	}
 
 	public void AddNeighbor(Gem g)
 	{
-		Neighbors.Add(g);
+		if(!Neighbors.Contains(g))
+			Neighbors.Add(g);
 	}
 
 	public bool IsNeighborWith(Gem g)
