@@ -177,7 +177,7 @@ public class Board : MonoBehaviour {
 	{
 		for(int i=0; i <gems.Count;i++)
 		{
-			gems[i].rigidbody2D.isKinematic = isOn; //kinematics only work between forces
+			gems[i].rigidbody.isKinematic = isOn; //kinematics only work between forces
 		}
 	}
 	public void SwapGems(Gem currentGem)
