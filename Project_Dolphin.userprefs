@@ -1,12 +1,14 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace />
-  <MonoDevelop.Ide.Workbench ActiveDocument="..\Old stuff\Project_Dolphin-6023e6293c1da7595b9e58302fbddf23cb296b02\Assets\Scripts\Gem.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Board.cs">
     <Files>
-      <File FileName="..\Old stuff\Project_Dolphin-6023e6293c1da7595b9e58302fbddf23cb296b02\Assets\Scripts\Gem.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Board.cs" Line="92" Column="2" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
+    <BreakpointStore>
+      <Breakpoint file="C:\Users\Charles\Project_Dolphin\Assets\Scripts\Feeler.cs" line="20" />
+    </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
 </Properties>
