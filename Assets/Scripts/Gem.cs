@@ -4,6 +4,8 @@ using System.Collections.Generic;
 
 public class Gem : MonoBehaviour {
 
+	public GameObject gemHolder;
+	public GameObject cube;
 	public string[] gemSpriteName = {"RedGem", "BlueGem", "YellowGem", "GreenGem", "PurpleGem"};
 	public GameObject selector;
 	public string color = "";
@@ -50,9 +52,12 @@ public class Gem : MonoBehaviour {
 	}
 	public void CreateGem()
 	{
+		Destroy (cube);
 		color = gemSpriteName[Random.Range (0,gemSpriteName.Length)];
-		Material gemColor = Resources.Load ("Materials/" + color) as Material;
-		gemShade.renderer.material = gemColor;
+		GameObject gemPrefab = Resources.Load ("Prefabs/"+color) as GameObject;
+		cube = (GameObject)Instantiate (gemPrefab,Vector3.zero,Quaternion.identity);
+		cube.transform.parent= transform;
+		cube.transform.localPosition = Vector3.zero;
 		isMatched = false;
 	}
 
